@@ -47,8 +47,8 @@ console.log('from supervisor route', req.params.id);
 
 
 mongoose.connect(process.env.MONGO_URI).then(() => {
-app.listen(5000, () => {
-console.log('server listening on port 5000');
+app.listen(process.env.PORT, () => {
+console.log('server listening');
 });
 }).catch(err => {
   console.log(err);
